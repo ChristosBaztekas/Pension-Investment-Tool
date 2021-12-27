@@ -25,6 +25,8 @@ public class Consultant {
         this.password = password;
     }
 
+    public Consultant(){};
+
     public String getFullName() {
         return fullname;
     }
