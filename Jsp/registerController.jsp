@@ -35,7 +35,7 @@ if (name.length() >= 6 && username.length() >= 3  && password.length() >= 6 &&  
     } else {     
 %>
 <!-- addd alerttppedia not acceptable -->
-<jsp:forward page="closecustomer.jsp" />
+<jsp:forward page="login.jsp" />
 <%        
     }     
 %>
