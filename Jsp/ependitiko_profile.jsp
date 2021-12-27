@@ -8,6 +8,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
 
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ page import="Insurance.*,java.util.List" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -101,22 +102,13 @@ if ( session.getAttribute("consultantObj2021") == null ) {
         </div>
 <%
 	}
-%>	
-       
-
-        
+%>	        
       </div>
     </main>
 </div>
 </div>
-
 </body>
 <script src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
 <script src="assets/vendor/feather/feather.min.js"></script>
 <script src="assets/js/calculation.js"></script>
 </html>
-
-
-
-<!-- <img src="assets/img/ependitiko/epend-1.jpg" style="width:100%;"> 8-->
-<!-- <img src="assets/img/ependitiko/epend-2.jpg" style="width:100%;"> 9-->

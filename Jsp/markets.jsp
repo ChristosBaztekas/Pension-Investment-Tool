@@ -4,6 +4,13 @@ if ( session.getAttribute("consultantObj2021") == null ) {
 %>
 	<jsp:forward page="login.jsp"/>  
 <%}%>
+
+
+<%@ page contentType="text/html; charset=utf-8" %>
+<%@ page import="Insurance.*,java.util.List" %>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -76,6 +83,9 @@ if ( session.getAttribute("consultantObj2021") == null ) {
               <div style="padding: 15px;" class="col-xl-4 col-sm-6">
                 <h5 class="text-black-50 me-2">Διάλεξε Αγορά: </h5>
               </div>
+
+      
+
               <div style="text-align: right;padding: 15px" class="col-xl-4 col-sm-6">
                 <select class="btn btn-secondary" autofocus="autofocus" id="markets">
                   <option value="Nasdaq">Nasdaq</option>
@@ -96,7 +106,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
           </div>
         </div>
       </div>
-
+      <!-- add note  -->
       <div class="canvas"></div>
 
       <div class="numbers">
@@ -115,3 +125,4 @@ if ( session.getAttribute("consultantObj2021") == null ) {
 <script src="assets/js/specific_markets.js"></script>
 </body>
 </html>
+

@@ -28,6 +28,9 @@
           <div class="alert alert-danger text-center" role="alert"><%=(String)request.getAttribute("message") %></div>
         <% } %>
 
+        <% if(request.getAttribute("success_register") != null) { %>		
+          <div class="alert alert-success text-center" role="alert"><%=(String)request.getAttribute("success_register") %></div>
+        <% } %>
        
         <form id="login_form" method="post" action="loginController.jsp">
           <span id="login_error_message"></span>

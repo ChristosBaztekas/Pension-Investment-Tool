@@ -28,20 +28,14 @@ if (name.length() >= 6 && username.length() >= 3  && password.length() >= 6 &&  
     dao.register(obj);
 %>   
 
-
-done
-
-
+<%request.setAttribute("success_register", "Registration done, please enter username and password for log-in");%>
+<!-- success message -->
 
 <%        
     } else {     
 %>
-
-<!-- Not acceptable Parameters -->
-<!-- suitable messages -->
-oops 
-
-
+<!-- addd alerttppedia not acceptable -->
+<jsp:forward page="closecustomer.jsp" />
 <%        
     }     
 %>
