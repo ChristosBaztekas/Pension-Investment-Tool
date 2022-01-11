@@ -102,7 +102,10 @@ if ( session.getAttribute("consultantObj2021") == null ) {
         </div>
 <%
 	}
-%>	        
+%>
+        <div class="text-center">
+          <button style="border-radius: 0 !important;" class="btn btn-primary calculate-button">Υπολόγισε</button>
+        </div>
       </div>
     </main>
 </div>
