@@ -75,28 +75,28 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                             <option>Ειθετικό</option>
                             <option>Ισορροπημένο</option>
                         </select>
-                        <div id="gender_error_message" class="text-danger"></div>
+                        <div id="gender_error_investmentprofile" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="password">Coment on Investment Tool Markets</label>
-                        <input type="Markets" class="form-control" id="Markets" name="Markets" maxlength="50"
-                            placeholder="Enter Description">
+                        <label for="Markets">Coment on Investment Tool Markets</label>
+                        <textarea type="Markets" class="form-control" id="Markets" name="Markets" rows="3"
+                                  placeholder="Enter Description"></textarea>
                         <div id="Markets_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="password">Coment on Investment Tool Savings</label>
-                        <input type="Savings" class="form-control" id="Savings" name="Savings" maxlength="50"
-                            placeholder="Enter Savings">
+                        <label for="Savings">Coment on Investment Tool Savings</label>
+                        <textarea type="Savings" class="form-control" id="Savings" name="Savings" rows="3"
+                                  placeholder="Enter Savings"></textarea>
                         <div id="Savings_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="password">Coment on Investment Tool Pension</label>
-                        <input type="Pension" class="form-control" id="Pension" name="Pension" maxlength="50"
-                            placeholder="Enter Pension">
+                        <label for="Pension">Coment on Investment Tool Pension</label>
+                        <textarea type="Pension" class="form-control" id="Pension" name="Pension" rows="3"
+                                  placeholder="Enter Pension"></textarea>
                         <div id="Pension_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="password">Short Description for the customer</label>
+                        <label for="Description">Short Description for the customer</label>
                         <input type="Description" class="form-control" id="Description" name="Description" maxlength="50"
                             placeholder="Enter Description">
                         <div id="Description_error_message" class="text-danger"></div>
