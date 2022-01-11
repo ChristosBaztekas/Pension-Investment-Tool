@@ -33,13 +33,18 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                 <h1 class="text-center">Close Customer</h1>
                 <hr>
                 <form id="register_form" action="closecustomercontroller.jsp" method="POST">
-                    <p class="lead">You can add new customer!.</p>
-                    <div id="alert_error_message" class="alert alert-danger collapse" role="alert">
+                    <p class="lead">You can add new customer!</p>
+                    <div id="alert_error_message" class="alert alert-danger
+                    <%if (request.getAttribute("error") != null && (request.getAttribute("error").equals("errorRegister"))) {
+                    } else {
+                        %>
+                        collapse
+                        <%
+                    }
+                    %>
+                    " role="alert">
                         <i class="fa fa-exclamation-triangle"></i>
                         Please check in on some of the fields below.
-                    </div>
-                    <div id="alert_sucess_message" class="alert alert-success collapse" role="alert">
-                        New user successfully created. <a href="login.jsp" class="alert-link">Click here to login.</a>
                     </div>
                     <div class="mb-3">
                         <label for="fullname">Full Name *</label>
@@ -69,7 +74,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <div id="gender_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label>Categoty of Investment Profile</label>
+                        <label>Category of Investment Profile</label>
                         <select name="investmentprofile" id="investmentprofile" class="form-select">
                             <option value="" hidden>Category of Investment Profile</option>
                             <option>Ειθετικό</option>
@@ -78,19 +83,19 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <div id="gender_error_investmentprofile" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Markets">Coment on Investment Tool Markets</label>
+                        <label for="Markets">Comment on Investment Tool Markets</label>
                         <textarea type="Markets" class="form-control" id="Markets" name="Markets" rows="3"
                                   placeholder="Enter Description"></textarea>
                         <div id="Markets_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Savings">Coment on Investment Tool Savings</label>
+                        <label for="Savings">Comment on Investment Tool Savings</label>
                         <textarea type="Savings" class="form-control" id="Savings" name="Savings" rows="3"
                                   placeholder="Enter Savings"></textarea>
                         <div id="Savings_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Pension">Coment on Investment Tool Pension</label>
+                        <label for="Pension">Comment on Investment Tool Pension</label>
                         <textarea type="Pension" class="form-control" id="Pension" name="Pension" rows="3"
                                   placeholder="Enter Pension"></textarea>
                         <div id="Pension_error_message" class="text-danger"></div>

@@ -47,7 +47,15 @@ if (Description != null) {
 //name && surname check all acceptable conditions 
 if (phone.length() == 10) {        
     Customer obj = new Customer(fullname, email, phone, gender, investmentprofile, Markets, Savings, Pension, Description );
-    customer.register(obj);
+    try {
+        customer.register(obj);
+    }  catch (Exception e) {
+        %>
+<%request.setAttribute("error", "errorRegister");%>
+<jsp:forward page="closecustomer.jsp" />
+<%
+    }
+
 %>  
 
 
@@ -59,7 +67,8 @@ if (phone.length() == 10) {
     } else {     
 %>
 <!-- addd alerttppedia not acceptable -->
-<jsp:forward page="register.jsp" />
+<%request.setAttribute("error", "errorRegister");%>
+<jsp:forward page="closecustomer.jsp" />
 <%        
     }     
 %>
