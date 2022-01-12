@@ -45,10 +45,7 @@ public class InvestmentProfileService {
                         rs.getString("quetion"),
                         rs.getString("answer_1"),
                         rs.getString("answer_2"),
-                        rs.getString("answer_3"),
-                        rs.getInt("value1"),
-                        rs.getInt("value2"),
-                        rs.getInt("value3")
+                        rs.getString("answer_3")
                 ));
 
             }
