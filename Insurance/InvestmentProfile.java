@@ -13,9 +13,6 @@ public class InvestmentProfile {
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
-        this.value1 = value1;
-        this.value2 = value2;
-        this.value3 = value3;
 
     }
 
