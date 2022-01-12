@@ -28,7 +28,7 @@ public class InvestmentProfileService {
         java.sql.Connection con = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
-        String sql = "select q.quetion, a.answer_1, a.answer_2, answer_3 from answer as a , quetion as q where a.id_a = q.id_q;";
+        String sql = "select * from answer as a , quetion as q where a.id_a = q.id_q;";
 
         try {
 
@@ -41,7 +41,15 @@ public class InvestmentProfileService {
 
             while ( rs.next() ) {
 
-                profile.add( new InvestmentProfile( rs.getString("quetion"), rs.getString("answer_1"), rs.getString("answer_2"), rs.getString("answer_3") ) );
+                profile.add( new InvestmentProfile(
+                        rs.getString("quetion"),
+                        rs.getString("answer_1"),
+                        rs.getString("answer_2"),
+                        rs.getString("answer_3"),
+                        rs.getInt("value1"),
+                        rs.getInt("value2"),
+                        rs.getInt("value3")
+                ));
 
             }
 

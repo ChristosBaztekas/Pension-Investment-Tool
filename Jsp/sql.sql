@@ -1,3 +1,29 @@
+-- CREATE TABLE quetion (
+--                          id_q int not null,
+--                          quetion varchar(1000) not null,
+--                          primary key(id_q)
+-- );
+-- CREATE TABLE Answer (
+--                         answer_1 VARCHAR(200) NOT NULL,
+--                         answer_2 VARCHAR(200) NOT NULL,
+--                         answer_3 VARCHAR(200) NOT NULL,
+--                         value1 int not null,
+--                         value2 int not null,
+--                         value3 int not null,
+--                         id_a INT NOT NULL,
+--                         FOREIGN KEY (id_a) REFERENCES Quetion(id_q)
+-- );
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("A.Συντηρητικός", "B.Ισορροπημένος", "Γ.Επιθετικός",1, 0, 0, 0);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("A.Εισόδημα μετά τη συνταξιοδότηση", "Β.Σπουδές παιδιών", "Γ.Άλλη μελλοντική ανάγκη",2, 0,0,0);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α.Εφάπαξ", "Β. Σε τακτικές καταβολές", "Γ.Και οι δύο επιλογές",3, 2, 20, 10);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α.Μικρότερος από 10 έτη*", "Β.10 έως 20 έτη", "20. έτη και άνω",4, 1, 5, 10);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α.Έως 20%", "Β.20%-40%", "Γ.Πάνω από 40%",5, 10, 5, 1);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("A.Έχω ελάχιστη/μηδενική εμπειρία στη διαχείριση επενδύσεων που αφορούν αγορές κεφαλαίων", "Β. Έχω μερική γνώση/εμπειρία σε επενδύσεις που αφορούν αγορές κεφαλαίων", "Γ. Έχω πλήρη εξοικείωση με τέτοιου είδους επενδύσεις",6, 1, 10, 20);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α.Υψηλός", "Β.Μέτριος", "Γ.Χαμηλός / Δεν έχω προβεί σε αντίστοιχη οικονομική απόφαση – αποταμίευση ή επένδυση στο παρελθόν",7, 10, 5, 1);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α.Τολμηρή / Επιθετική", "Β. Μέτρια / Ισορροπημένη", "Γ. Προσεκτική / Συντηρητική",8, 10, 5, 1);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α.Ναι", "Β.Δεν είμαι σίγουρος/η", "Γ.Όχι",9, 1, 1, 10);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α. Χαρτοφυλάκιο Α ", "Β. Χαρτοφυλάκιο Β ", "Γ. Χαρτοφυλάκιο Γ ",10, 1, 5, 10);
+-- INSERT INTO `Answer`(answer_1, answer_2, answer_3,id_a, value1, value2, value3) VALUES ("Α. Χαρτοφυλάκιο Α ", "Β. Χαρτοφυλάκιο Α ", "Γ. Χαρτοφυλάκιο Α ",11, 1, 5, 10);
 /**store consultant so that they log-in and register*/
 select * from consultantt;
 drop table consultantt;
