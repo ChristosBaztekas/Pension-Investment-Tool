@@ -96,7 +96,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
           <label>
             <input type="checkbox" class="form-check-input" value='1' name="ans<%=counter_js%>"><%=profilee.getAnswer1() %></label><br>
           <label>
-            <input type="checkbox" class="form-check-input" value='6' name="ans<%=counter_js%>"><%=profilee.getAnswer2() %></label><br>
+            <input type="checkbox" class="form-check-input" value='4' name="ans<%=counter_js%>"><%=profilee.getAnswer2() %></label><br>
           <label>
             <input type="checkbox" class="form-check-input" value='10' name="ans<%=counter_js%>"><%=profilee.getAnswer3() %>	<br></label>
         </div>
