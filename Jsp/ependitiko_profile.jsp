@@ -80,7 +80,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
           InvestmentProfileService service = new InvestmentProfileService();
           List<InvestmentProfile> profile = service.getQuetionsAndAnswers();
             int counter_js = 0;
-            for (InvestmentProfile profilee: profile) {
+            for (Insurance.InvestmentProfile profilee: profile) {
             counter_js += 1;
         %>
         <div class="form-check">
@@ -94,11 +94,11 @@ if ( session.getAttribute("consultantObj2021") == null ) {
           <%}%>
           
           <label>
-            <input type="checkbox" class="form-check-input" value="<%=profilee.getValue1() %>" name="ans<%=counter_js%>"><%=profilee.getAnswer1() %></label><br>
+            <input type="checkbox" class="form-check-input" value='1' name="ans<%=counter_js%>"><%=profilee.getAnswer1() %></label><br>
           <label>
-            <input type="checkbox" class="form-check-input" value="<%=profilee.getValue2() %>" name="ans<%=counter_js%>"><%=profilee.getAnswer2() %></label><br>
+            <input type="checkbox" class="form-check-input" value='6' name="ans<%=counter_js%>"><%=profilee.getAnswer2() %></label><br>
           <label>
-            <input type="checkbox" class="form-check-input" value="<%=profilee.getValue3() %>" name="ans<%=counter_js%>"><%=profilee.getAnswer3() %>	<br></label>
+            <input type="checkbox" class="form-check-input" value='10' name="ans<%=counter_js%>"><%=profilee.getAnswer3() %>	<br></label>
         </div>
 <%
 	}
