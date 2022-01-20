@@ -36,7 +36,7 @@
 <header id="header" class="header fixed-top">
   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-    <a href="index.html" class="logo d-flex align-items-center">
+    <a href="#" class="logo d-flex align-items-center">
       <img src="assets/img/logo.png" alt="">
       <span>RIRA</span>
     </a>
@@ -44,8 +44,7 @@
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link scrollto active" href="#hero">Αρχική</a></li>
-        <li><a class="nav-link scrollto" href="#about">Για εμάς</a></li>
-        <li><a class="nav-link scrollto" href="#services">Υπηρεσίες</a></li>
+        <li><a class="nav-link scrollto" href="#counts">Σχετικά</a></li>
         <!--          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>-->
         <li><a class="nav-link scrollto" href="#team">Ομάδα</a></li>
         <!--          <li><a href="blog.html">Blog</a></li>-->
@@ -66,14 +65,6 @@
       <div class="col-lg-6 d-flex flex-column justify-content-center">
         <h1 data-aos="fade-up">Καλώς ήρθες! Ετοιμάσου να αλλάξεις το μέλλον σου!</h1>
         <h2 data-aos="fade-up" data-aos-delay="400">Βρες την προσωπικότητά σου στις επενδυτικές προκλήσεις και στόχευσε στην εξασφάλιση του μέλλοντός σου!</h2>
-        <div data-aos="fade-up" data-aos-delay="600">
-          <div class="text-center text-lg-start">
-            <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-              <span>Ανακάλυψέ τα</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
       </div>
       <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
         <img src="assets/img/hero-img.png" class="img-fluid" alt="">
@@ -415,7 +406,7 @@
 
     <div class="row gy-4">
 
-      <div class="col-lg-6">
+      <div class="col-lg-12">
 
         <div class="row gy-4">
           <div class="col-md-6">
@@ -450,38 +441,6 @@
 
       </div>
 
-      <div class="col-lg-6">
-        <form action="forms/contact.php" method="post" class="php-email-form">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Το ονοματεπώνυμό σας" required>
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Το Email σας" required>
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Θέμα" required>
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Μήνυμα" required></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Το μήνυμά σας στάλθηκε επιτυχώς. Ευχαριστούμε!</div>
-
-              <button type="submit">Αποστολή Μηνμύματος</button>
-            </div>
-
-          </div>
-        </form>
-
-      </div>
 
     </div>
 
@@ -514,7 +473,7 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-info">
-          <a href="index.html" class="logo d-flex align-items-center">
+          <a href="#" class="logo d-flex align-items-center">
             <img src="assets/img/logo.png" alt="">
             <span>Γρήγορη Δοκιμή</span>
           </a>
