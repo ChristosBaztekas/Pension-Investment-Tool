@@ -63,7 +63,33 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                     %>
                     " role="alert">
                         <i class="fa fa-exclamation-triangle"></i>
-                        Παρακαλώ ελένξτε ορισμένα πεδία
+                        Παρακαλώ τα παρακάτω πεδία.
+                        <br>
+                        <%if (request.getAttribute("error1") != null && request.getAttribute("error1").equals("")) {
+                        %>
+                        <i class="fa fa-exclamation-triangle"></i>
+                        Ονοματεπώνυμο
+                        <br>
+                        <%
+                            }
+                        %>
+                        <%if (request.getAttribute("error2") != null && request.getAttribute("error2").equals("")) {
+                        %>
+                        <i class="fa fa-exclamation-triangle"></i>
+                        Email
+                        <br>
+                        <%
+                            }
+                        %>
+                        <%if (request.getAttribute("error3") != null) {
+                        %>
+                        <i class="fa fa-exclamation-triangle"></i>
+                        Αριθμός
+
+                        <br>
+                        <%
+                            }
+                        %>
                     </div>
                     <div class="mb-3">
                         <label for="fullname">Ονοματεπώνυμο</label>

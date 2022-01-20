@@ -14,7 +14,29 @@
     String Pension = request.getParameter("Pension");
     String Description = request.getParameter("Description");
     CustomerService customer = new CustomerService();
-    
+
+    if (fullname == null || email == null || phone == null || phone.length() != 10) {
+%>
+<%request.setAttribute("error", "errorRegister");%>
+<%request.setAttribute("error1", fullname);%>
+<%request.setAttribute("error2", email);%>
+<%
+    if (fullname == null) {
+%>
+<%request.setAttribute("error1", "name");%>
+<%
+    }
+    if (email == null) {
+%>
+<%request.setAttribute("error2", "email");%>
+<%
+    }
+    if (phone == null || phone.length() != 10) {
+%>
+<%request.setAttribute("error3", "phone");%>
+<%
+        }
+    }
 // convert to UTF-8 to support Greek characters
 if (fullname != null) {
 	fullname = new String(fullname.getBytes("ISO-8859-1"), "UTF-8");
@@ -42,21 +64,24 @@ if (Description != null) {
 	Description = new String(Description.getBytes("ISO-8859-1"), "UTF-8");
 }
 %>
-
 <%
+
 //name && surname check all acceptable conditions 
-if (phone.length() == 10) {        
-    Customer obj = new Customer(fullname, email, phone, gender, investmentprofile, Markets, Savings, Pension, Description );
-    try {
-        customer.register(obj);
-    }  catch (Exception e) {
-        %>
+if (phone.length() == 10) {
+    if (fullname != null) {
+        Customer obj = new Customer(fullname, email, phone, gender, investmentprofile, Markets, Savings, Pension, Description );
+        try {
+            customer.register(obj);
+        }  catch (Exception e) {
+%>
 <%request.setAttribute("error", "errorRegister");%>
 <jsp:forward page="closecustomer.jsp" />
 <%
+        }
     }
 
-%>  
+
+%>
 
 
 
