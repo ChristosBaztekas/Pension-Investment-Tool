@@ -63,72 +63,73 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                     %>
                     " role="alert">
                         <i class="fa fa-exclamation-triangle"></i>
-                        Please check in on some of the fields below.
+                        Παρακαλώ ελένξτε ορισμένα πεδία
                     </div>
                     <div class="mb-3">
-                        <label for="fullname">Full Name *</label>
+                        <label for="fullname">Ονοματεπώνυμο</label>
                         <input type="text" class="form-control" id="fullname" name="fullname" maxlength="50"
-                            placeholder="Enter full name">
+                            placeholder="Ονοματεπώνυμο">
                         <div id="fullname_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="email">Email *</label>
+                        <label for="email">Email</label>
                         <input type="email" class="form-control" id="email" name="email" maxlength="100"
-                            placeholder="Enter email">
+                            placeholder="Email">
                         <div id="email_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="phone">Phone *</label>
+                        <label for="phone">Τηλέφωνο</label>
                         <input type="phone" class="form-control" id="phone" name="phone" maxlength="100"
-                            placeholder="Enter phone">
+                            placeholder="Τηλέφωνο">
                         <div id="phone_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label>Gender *</label>
+                        <label>Φύλο</label>
                         <select name="gender" id="gender" class="form-select">
-                            <option value="" hidden>Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
+                            <option value="" hidden>Φύλο</option>
+                            <option>Άνδρας</option>
+                            <option>Γυναίκα</option>
                         </select>
                         <div id="gender_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label>Category of Investment Profile</label>
+                        <label>Κατηγορία Επενδυτικού Προφίλ</label>
                         <select name="investmentprofile" id="investmentprofile" class="form-select">
-                            <option value="" hidden>Category of Investment Profile</option>
-                            <option>Ειθετικό</option>
+                            <option value="" hidden>Κατηγορία Επενδυτικού Προφίλ</option>
+                            <option>Επιθετικό</option>
                             <option>Ισορροπημένο</option>
+                            <option>Συντηρητικό</option>
                         </select>
                         <div id="gender_error_investmentprofile" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
                         <label for="Markets">Comment on Investment Tool Markets</label>
                         <textarea type="Markets" class="form-control" id="Markets" name="Markets" rows="3"
-                                  placeholder="Enter Description"></textarea>
+                                  placeholder="Περιγραφή"></textarea>
                         <div id="Markets_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
                         <label for="Savings">Comment on Investment Tool Savings</label>
                         <textarea type="Savings" class="form-control" id="Savings" name="Savings" rows="3"
-                                  placeholder="Enter Savings"></textarea>
+                                  placeholder="Περιγραφή"></textarea>
                         <div id="Savings_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
                         <label for="Pension">Comment on Investment Tool Pension</label>
                         <textarea type="Pension" class="form-control" id="Pension" name="Pension" rows="3"
-                                  placeholder="Enter Pension"></textarea>
+                                  placeholder="Περιγραφή"></textarea>
                         <div id="Pension_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
                         <label for="Description">Short Description for the customer</label>
                         <input type="Description" class="form-control" id="Description" name="Description" maxlength="50"
-                            placeholder="Enter Description">
+                            placeholder="Περιγραφή">
                         <div id="Description_error_message" class="text-danger"></div>
                     </div>
 
                     <hr class="mb-4">
                     <input type="hidden" name="action" id="action" value="register_user">
-                    <button class="btn btn-primary btn-lg btn-block" type="submit">Register<%=(String)session.getAttribute("username")%></button>
+                    <button style="border-radius: unset!important;" class="btn btn-primary btn-lg btn-block" type="submit">Register</button>
                     
                     <!-- <div class="mt-2">
                         <p><a href="login.jsp">Already registered? Click here to login.</a></p>
