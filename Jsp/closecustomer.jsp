@@ -21,9 +21,28 @@ if ( session.getAttribute("consultantObj2021") == null ) {
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logos/favicon.jpg">
 
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+
+    <link href="assets/css/platform.css" rel="stylesheet">
 </head>
 <body class="bg-light">
-
+<%@include file="header.jsp"%>
+<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -118,8 +137,10 @@ if ( session.getAttribute("consultantObj2021") == null ) {
             </div>
         </div>
     </div>
+</main>
 
     <!-- JQuery-3.4.1 -->
     <script src="assets/vendor/jquery/jquery-3.6.0.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
