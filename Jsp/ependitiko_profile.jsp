@@ -41,33 +41,35 @@ if ( session.getAttribute("consultantObj2021") == null ) {
   <link href="assets/css/platform.css" rel="stylesheet">
 </head>
 <body>
-<div class="product">
-  <span class="helper"></span>
-  <div>
-    <div style="display: none" class="popupCloseButton">&times;</div>
-    <h4 class="removeLater">Υπολογισμός επενδυτικού προφίλ</h4>
-    <p class="removeLater">
-      Παρακαλώ περιμένετε!
-    </p>
-    <div id="mySpinner">
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="sr-only"></span>
-        </div>
-      </div>
-    </div>
-    <h4 style="display: none" id="synt">Προφίλ σου είναι <span style="color: red">Συντηρητικό</span>. Επικοινώνησε μαζί μου
-      για να βρούμε πως να καλύψουμε τις ανάγκες σου</h4>
-    <h4 style="display: none" id="isor">Προφίλ σου είναι <span style="color: red">Ισορροπημένο</span>. Επικοινώνησε μαζί μου
-      για να βρούμε πως να καλύψουμε τις ανάγκες σου</h4>
-    <h4 style="display: none" id="epi">Προφίλ σου είναι <span style="color: red">Επιθετικό</span>. Επικοινώνησε μαζί μου
-      για να βρούμε πως να καλύψουμε τις ανάγκες σου</h4>
-  </div>
 
-</div>
 
 <%@include file="header.jsp"%>
+
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <div class="product">
+        <span class="helper"></span>
+        <div>
+          <div style="display: none" class="popupCloseButton">&times;</div>
+          <h4 class="removeLater">Υπολογισμός επενδυτικού προφίλ</h4>
+          <p class="removeLater">
+            Παρακαλώ περιμένετε!
+          </p>
+          <div id="mySpinner">
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only"></span>
+              </div>
+            </div>
+          </div>
+          <h4 style="display: none" id="synt">Προφίλ σου είναι <span style="color: red">Συντηρητικό</span>. Επικοινώνησε μαζί μου
+            για να βρούμε πως να καλύψουμε τις ανάγκες σου</h4>
+          <h4 style="display: none" id="isor">Προφίλ σου είναι <span style="color: red">Ισορροπημένο</span>. Επικοινώνησε μαζί μου
+            για να βρούμε πως να καλύψουμε τις ανάγκες σου</h4>
+          <h4 style="display: none" id="epi">Προφίλ σου είναι <span style="color: red">Επιθετικό</span>. Επικοινώνησε μαζί μου
+            για να βρούμε πως να καλύψουμε τις ανάγκες σου</h4>
+        </div>
+
+      </div>
       <div class="">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Επενδυτικό Προφίλ</h1>
