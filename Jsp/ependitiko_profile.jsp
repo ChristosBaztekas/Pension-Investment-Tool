@@ -86,7 +86,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
             counter_js += 1;
         %>
         <div class="form-check">
-          <h3 class="descriptionLabel"><%=profilee.getQuetion() %> <br></h3>
+          <h3 class="descriptionLabel"><%=counter_js%><%="."%><%=profilee.getQuetion() %> <br></h3>
           <%if (counter_js == 10) { %>
           <img src="assets/img/ependitiko/epend-1.jpg" style="width:100%;">
           <%}%>

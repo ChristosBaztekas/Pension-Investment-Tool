@@ -51,8 +51,11 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                 </div></a>
                 <h1 class="text-center">Close Customer</h1>
                 <hr>
+                <% if(request.getAttribute("success_register") != null) { %>		
+                    <div class="alert alert-success text-center" role="alert"><%=(String)request.getAttribute("success_register") %></div>
+                  <% } %>
                 <form id="register_form" action="closecustomercontroller.jsp" method="POST">
-                    <p class="lead">You can add new customer!</p>
+                    <p class="lead">Μπορείτε να προσθέσετε τον νέο πελάτη !</p>
                     <div id="alert_error_message" class="alert alert-danger
                     <%if (request.getAttribute("error") != null && (request.getAttribute("error").equals("errorRegister"))) {
                     } else {
@@ -63,12 +66,12 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                     %>
                     " role="alert">
                         <i class="fa fa-exclamation-triangle"></i>
-                        Παρακαλώ τα παρακάτω πεδία.
+                        Παρακαλώ ελένξετε τα παρακάτω : </br>
                         <br>
                         <%if (request.getAttribute("error1") != null && request.getAttribute("error1").equals("")) {
                         %>
                         <i class="fa fa-exclamation-triangle"></i>
-                        Ονοματεπώνυμο
+                        * Το <b>Ονοματεπώνυμο </b> πρέπει να συμπληρωθεί
                         <br>
                         <%
                             }
@@ -76,7 +79,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <%if (request.getAttribute("error2") != null && request.getAttribute("error2").equals("")) {
                         %>
                         <i class="fa fa-exclamation-triangle"></i>
-                        Email
+                        * Το <b>Email </b> πρέπει να συμπληρωθεί
                         <br>
                         <%
                             }
@@ -84,7 +87,7 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <%if (request.getAttribute("error3") != null) {
                         %>
                         <i class="fa fa-exclamation-triangle"></i>
-                        Αριθμός
+                        * Ο <b>Αριθμός τηλεφώνου </b> πρέπει να συμπληρωθεί και να αποτελείται από 10 χαρακτήρες 
 
                         <br>
                         <%
@@ -92,19 +95,19 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         %>
                     </div>
                     <div class="mb-3">
-                        <label for="fullname">Ονοματεπώνυμο</label>
+                        <label for="fullname">Ονοματεπώνυμο*</label>
                         <input type="text" class="form-control" id="fullname" name="fullname" maxlength="50"
                             placeholder="Ονοματεπώνυμο">
                         <div id="fullname_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="email">Email</label>
+                        <label for="email">Email*</label>
                         <input type="email" class="form-control" id="email" name="email" maxlength="100"
                             placeholder="Email">
                         <div id="email_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="phone">Τηλέφωνο</label>
+                        <label for="phone">Τηλέφωνο*</label>
                         <input type="phone" class="form-control" id="phone" name="phone" maxlength="100"
                             placeholder="Τηλέφωνο">
                         <div id="phone_error_message" class="text-danger"></div>
@@ -129,25 +132,25 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <div id="gender_error_investmentprofile" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Markets">Comment on Investment Tool Markets</label>
+                        <label for="Markets">Σχόλιο για το ασφαλιστικό εργαλείο Markets</label>
                         <textarea type="Markets" class="form-control" id="Markets" name="Markets" rows="3"
                                   placeholder="Περιγραφή"></textarea>
                         <div id="Markets_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Savings">Comment on Investment Tool Savings</label>
+                        <label for="Savings">Σχόλιο για το ασφαλιστικό εργαλείο Savings</label>
                         <textarea type="Savings" class="form-control" id="Savings" name="Savings" rows="3"
                                   placeholder="Περιγραφή"></textarea>
                         <div id="Savings_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Pension">Comment on Investment Tool Pension</label>
+                        <label for="Pension">Σχόλιο για το ασφαλιστικό εργαλείο Pension</label>
                         <textarea type="Pension" class="form-control" id="Pension" name="Pension" rows="3"
                                   placeholder="Περιγραφή"></textarea>
                         <div id="Pension_error_message" class="text-danger"></div>
                     </div>
                     <div class="mb-3">
-                        <label for="Description">Short Description for the customer</label>
+                        <label for="Description">Σύντομη περιγραφή για τον πελάτη</label>
                         <input type="Description" class="form-control" id="Description" name="Description" maxlength="50"
                             placeholder="Περιγραφή">
                         <div id="Description_error_message" class="text-danger"></div>

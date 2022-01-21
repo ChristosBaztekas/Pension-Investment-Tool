@@ -85,8 +85,8 @@ if (phone.length() == 10) {
 
 
 
-<%request.setAttribute("success_register", "Registration done, please enter username and password for log-in");%>
-<jsp:forward page="login.jsp" /> 
+<%request.setAttribute("success_register", "Η εγγραφή ολοκληρώθηκε !");%>
+<jsp:forward page="closecustomer.jsp" /> 
 
 <%        
     } else {     
