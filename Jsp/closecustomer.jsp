@@ -1,10 +1,3 @@
-<!-- <%
-if ( session.getAttribute("consultantObj2021") == null ) {
-	request.setAttribute("message", "You are not authorized to access this resource. Please login.");
-%>
-	<jsp:forward page="login.jsp"/>  
-<%}%> -->
-
 <!DOCTYPE html>
 <html>
 
@@ -51,21 +44,58 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                 </div></a>
                 <h1 class="text-center">Close Customer</h1>
                 <hr>
-                <% if(request.getAttribute("success_register") != null) { %>		
+                <% int flag = 0;%>
+
+                
+               
+              
+                <!-- error fullname -->
+                <%if (request.getAttribute("error1") != null && request.getAttribute("error2") != null){%>
+                    <div id="alert_error_message" class="alert alert-danger">
+                    Παρακαλώ ελένξτε τα πεδία: <br>
+                    <br>
+                    *Το <b>Email</b> είναι υποχρεωτικό.<br> 
+                    *To <b>Τηλέφωνο</b> είναι υποχρεωτικό και πρέπει να αποτελεία από <b>10</b> χαρακτήρες.<br>
+                    </div>
+                    
+                    <%flag = 1;%>
+                <%}%>
+                <!-- only phone -->
+                <% if (flag != 1 && request.getAttribute("error1") != null){%> 
+                    <div id="alert_error_message" class="alert alert-danger">
+                    Παρακαλώ ελένξτε: <br>
+                    <br>
+                    *Το <b>Email</b> είναι υποχρεωτικό.<br> 
+                    </div>
+                    <%flag = 1;%>
+                <%}%>
+                <!-- only email -->
+                <% if (flag != 1 && request.getAttribute("error2") != null ){%> 
+                    <div id="alert_error_message" class="alert alert-danger">
+                        Παρακαλώ ελένξτε: <br>
+                        <br>
+                        *Το <b>Τηλέφωνο</b> είναι υποχρεωτικό και πρέπει να αποτελεία από <b>10</b> χαρακτήρες.<br><br> 
+                        </div>
+                        <%flag = 1;%>
+                <%}%>
+
+                <!-- registration done ! -->
+                <% if(flag == 0 && request.getAttribute("success_register") != null) { %>		
                     <div class="alert alert-success text-center" role="alert"><%=(String)request.getAttribute("success_register") %></div>
-                  <% } %>
+                <% } %>
+                
                 <form id="register_form" action="closecustomercontroller.jsp" method="POST">
                     <p class="lead">Μπορείτε να προσθέσετε τον νέο πελάτη !</p>
-                    <div id="alert_error_message" class="alert alert-danger
-                    <%if (request.getAttribute("error") != null && (request.getAttribute("error").equals("errorRegister"))) {
+                    <div>
+                    <!-- <%if (request.getAttribute("error") != null && (request.getAttribute("error").equals("errorRegister"))) {
                     } else {
                         %>
                         collapse
                         <%
                     }
-                    %>
-                    " role="alert">
-                        <i class="fa fa-exclamation-triangle"></i>
+                    %> -->
+                    <!-- " role="alert"> -->
+                        <!-- <i class="fa fa-exclamation-triangle"></i>
                         Παρακαλώ ελένξετε τα παρακάτω : </br>
                         <br>
                         <%if (request.getAttribute("error1") != null && request.getAttribute("error1").equals("")) {
@@ -92,10 +122,10 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <br>
                         <%
                             }
-                        %>
+                        %> -->
                     </div>
                     <div class="mb-3">
-                        <label for="fullname">Ονοματεπώνυμο*</label>
+                        <label for="fullname">Ονοματεπώνυμο</label>
                         <input type="text" class="form-control" id="fullname" name="fullname" maxlength="50"
                             placeholder="Ονοματεπώνυμο">
                         <div id="fullname_error_message" class="text-danger"></div>
@@ -116,8 +146,9 @@ if ( session.getAttribute("consultantObj2021") == null ) {
                         <label>Φύλο</label>
                         <select name="gender" id="gender" class="form-select">
                             <option value="" hidden>Φύλο</option>
-                            <option>Άνδρας</option>
-                            <option>Γυναίκα</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                            
                         </select>
                         <div id="gender_error_message" class="text-danger"></div>
                     </div>
