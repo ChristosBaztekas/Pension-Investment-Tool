@@ -1,3 +1,11 @@
+<%
+if ( session.getAttribute("consultantObj2021") == null ) {
+	request.setAttribute("message", "You are not authorized to access this resource. Please login.");
+%>
+	<jsp:forward page="login.jsp"/>  
+<%}%>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -55,7 +63,7 @@
                     Παρακαλώ ελένξτε τα πεδία: <br>
                     <br>
                     *Το <b>Email</b> είναι υποχρεωτικό.<br> 
-                    *To <b>Τηλέφωνο</b> είναι υποχρεωτικό και πρέπει να αποτελεία από <b>10</b> χαρακτήρες.<br>
+                    *To <b>Τηλέφωνο</b> είναι υποχρεωτικό και πρέπει να αποτελείται από <b>10</b> χαρακτήρες.<br>
                     </div>
                     
                     <%flag = 1;%>
@@ -74,7 +82,7 @@
                     <div id="alert_error_message" class="alert alert-danger">
                         Παρακαλώ ελένξτε: <br>
                         <br>
-                        *Το <b>Τηλέφωνο</b> είναι υποχρεωτικό και πρέπει να αποτελεία από <b>10</b> χαρακτήρες.<br><br> 
+                        *Το <b>Τηλέφωνο</b> είναι υποχρεωτικό και πρέπει να αποτελείται από <b>10</b> χαρακτήρες.<br><br> 
                         </div>
                         <%flag = 1;%>
                 <%}%>

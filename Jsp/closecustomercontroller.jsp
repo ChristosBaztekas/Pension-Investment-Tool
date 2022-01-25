@@ -1,3 +1,11 @@
+<%
+if ( session.getAttribute("consultantObj2021") == null ) {
+	request.setAttribute("message", "You are not authorized to access this resource. Please login.");
+%>
+	<jsp:forward page="login.jsp"/>  
+<%}%>
+
+
 <%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>--%>
 <%@ page import="Insurance.*" %>
 
