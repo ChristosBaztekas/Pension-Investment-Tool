@@ -19,7 +19,7 @@ Here, are the diagrams for our app.
 
 ![riraWEBAPP](usecase.png)
 
-* data base diagram diagram 
+* data base diagram 
 
 ![riraWEBAPP](db.png)
 
